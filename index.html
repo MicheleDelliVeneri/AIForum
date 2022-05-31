@@ -662,7 +662,7 @@
 							</div>
 							<div class="col">
 								<pre data-id="code-animation">
-									<code  data-trim data-line-numbers="1|18|26-28|30|31-38|39-46|47-54|55-61|62-63|64-73">
+									<code  data-trim data-line-numbers="1-16|18|26-28|30|31-38|39-46|47-54|55-61|62-63|64-73">
 										class Interpolate(nn.Module):
     										def __init__(self, scale_factor, mode, align_corners=False):
     										    super(Interpolate, self).__init__()
@@ -751,7 +751,7 @@
 							<div class="col">
 								<p>Blobs Finder</p>
 								<pre data-id="code-animation">
-									<code data-trim data-line-numbers>
+									<code data-trim data-line-numbers="1|23-24|29-41">
 										class AutoEncoder2D(nn.Module):
 											def __init__(
 												self, c_in, c_latent, c_out, act_fn, experiment, criterion, loss_weights
@@ -800,7 +800,7 @@
 							<div class="col">
 								<p>Training Script</p>
 								<pre data-id="code-animation">
-									<code data-trim data-line-numbers>
+									<code data-trim data-line-numbers="|1|2|3-4|7|8|9|10-12|16|17|18|19|21-23|25-27">
 										for epoch in range(num_epochs):
 											if phase == "train":
 												with experiment.train():
@@ -843,7 +843,7 @@
 								<video
 									muted
 									data-autoplay
-									src="/assets/SaveTheModel.mp4"
+									src="assets/SaveTheModel.mp4"
 									align="left">
 								</video>
 							</div>
@@ -1166,7 +1166,7 @@
 					
 					<section>
 						<h3 class="slide-title" style="position:absolut; top:0;">
-							Getting to know the<b class="alert">ResNet</b>
+							Getting to know the <b class="alert">ResNet</b>
 						</h3>
 						<div class="container">
 							<div class="col">
@@ -1324,7 +1324,7 @@
 									<li class="fragment fade-in">Generate more <b class="alert">realistic</b> simulations:<br>
 										<input type="checkbox" 
 										checked>Introduce spectral index $\rightarrow$ better continuum<br>
-										<input type="checkbox">Introduce velocity dispersion and 3D inclination
+										<input type="checkbox">Introduce velocity dispersion and 3D inclination<br>
 										<input type="checkbox">Model complex line profiles (velocity and inclinetion degeneracy)<br>
 										<input type="checkbox">Introduce complex morphologies and sources classes
 									</li>
