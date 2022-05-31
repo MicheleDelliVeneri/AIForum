@@ -257,13 +257,14 @@
 
 					<section>
 						<ul>
-							<li> <i>Step I</i>: Assemble from <b>data</b> or <b>simulations</b> a <b class="alert">training set</b> of images
+							<li> <i>Step I</i>: Get your hands on a <b class="alert">training set</b>  of images (<b>data</b> or <b>simulations</b>)
 								$$\mathcal{D} = \{(x_0, y_0),
 								(x_1, y_1), \ldots, (x_N, y_N) \}$$
-								$\Longrightarrow$ the dataset contains <b class="alert">hardcoded assumptions</b> about PSF $P$
+								$\Longrightarrow$ realize that the data actually contains <b class="alert">hardcoded assumptions</b> about PSF $P$
 								noise $n$, and galaxy morphology $x$.
 							</li>
-							<li class="fragment fade-up"> Step II: Train the neural network $f_\theta$ under a <b class="alert">regression loss</b> of the type:
+							<li class="fragment fade-up"> Step II: Train the neural network $f_\theta$ under the <b class="alert">regression loss</b> of your choice,
+								for example:
 								$$ \mathcal{L} = \sum_{i=0}^N \parallel x_i - f_\theta(y_i)\parallel^2 $$
 							</li>
 						</ul>
@@ -293,7 +294,7 @@
 					</section>
 
 					<section>
-						<p>Let's try to understand the neural network output by looking at the <b class="alert">loss function</b></p>
+						<p>Let's take a second look at the <b class="alert">loss function</b></p>
 						$$ \mathcal{L} = \sum_{(x_i, y_i) \in \mathcal{D}} \parallel x_i - f_\theta(y_i)\parallel^2 \quad \simeq \quad \int \parallel x - f_\theta(y) \parallel^2 \ p(x,y) \ dx dy $$
 
 						<div class="fragment" data-fragment-index="1">$$\Longrightarrow \int \left[ \int \parallel x - f_\theta(y) \parallel^2 \ p(x|y) \ dx \right] p(y) dy $$ </div>
@@ -321,8 +322,7 @@
 									<li class="fragment" data-fragment-index="5"> Using an <b class="alert">$\ell_1$ loss learns the median</b> of $p(x|y)$
 									</li>
 									<br>
-									<li class="fragment" data-fragment-index="7"> In general, training a neural network for regression doesn't
-										achieve de mode of the distribution.<br>
+									<li class="fragment" data-fragment-index="7"> It would be exceptionally if you could capture morphological nuances by aiming to learn their mean or median.<br>
 									</li>
 								</ul>
 							</div>
