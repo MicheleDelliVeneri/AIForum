@@ -911,7 +911,7 @@
 						</div>	
 					</section>
 					<section>
-						<h3 class="slide-title" style="position:absolut; top:0; background-color:#191919">
+						<h3 class="slide-title" style="position:absolut; top:0;" >
 							Feeding the data to<b class="alert"> Deep GRU</b>
 						</h3>
 						<img data-src="assets/SpectralPreprocessing.png"/>
@@ -920,14 +920,14 @@
 						<h3 class="slide-title" style="position:absolut; top:0;">
 							Deep Gated Recurrent Unit
 						</h3>
-						<div class="container" style="background-color:#191919">
+						<div class="container" >
 							<div class="col">
 								<img data-src="assets/GRU.png">
 								<p class="fragment fade-up" style="font-size:18px" align="left">
 									<b class='alert'>Reset Gate</b>: controls how much of the previous state we want to remember <br>
 									$\rightarrow$ captures short-term dependencies in the sequence
 								</p>
-								<p class="fragment fade-up" style="font-size:18px" align="left">
+								<p class="fragment fade-up" style="font-size:18px; background-color:#191919" align="left">
 									<b class='alert'>Update Gate</b>: controls how much of the new state is just a copy of the old state<br>
 									$\rightarrow$ captures long-term dependencies in the sequence
 								</p>
@@ -935,7 +935,7 @@
 
 							<div class="col">
 								<img data-src="assets/DeepGRU.png" style="background-color:#191919">	
-								<p class="fragment fade-up" style="font-size:16px" align="left" style="margin-left:100px">
+								<p class="fragment fade-up" style="font-size:16px; background-color:#191919" align="left" style="margin-left:100px">
 								$R_t = \sigma(X_t W_{xr} + H_{t-1}W_{hr} + b_r)$ <br><br>
 								$Z_t = \sigma(X_t W_{xz} + H_{t-1}W_{hz} + b_z)$<br>
 								$H'_{t - 1} = tanh(X_t W_{xh} + (R_t \times H_{t - 1}W_{hh} + b_h))$<br>
