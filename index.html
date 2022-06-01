@@ -935,6 +935,13 @@
 
 							<div class="col">
 								<img data-src="assets/DeepGRU.png">	
+								<p class="fragment fade-up" style="font-size:16px">
+								$R_t = \sigma(X_t W_{xr} + H_{t-1}W_{hr} + b_r)$ $\rigtharrow$ $R_t ~ 1$ (RNN), $R_t ~ 0$ (MLP)<br>
+								$Z_t = \sigma(X_t W_{xz} + H_{t-1}W_{hz} + b_z)$<br>
+								$H'_{t - 1} = tanh(X_t W_{xh} + (R_t \times H_{t - 1}W_{hh} + b_h))$<br>
+								$H_t = Z?t \times H_{t - 1} + (1 - Z_t) \times H'_{t - 1}$ $\rigtharrow$ <br>
+								$Z_t ~ 1$ (retain old state), $Z_t ~ 0$ ($H_t ~ H'_{t - 1})<br>
+								</p>
 							</div>
 						</div>
 					
