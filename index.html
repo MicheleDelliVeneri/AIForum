@@ -57,13 +57,12 @@
 					<section>
 						<h2 class="slide-title" style="position:absolut; top:0;"> Our Motivations: the road to ALMA 2030</h2>
 						<ul align="left">
-							<li class="fragment fade-up"> ALMA Sensitivity and observing frequency will 
-								<b class="alert">increase</b> </li>
+							<li class="fragment fade-up"> ALMA new correlators will  
+								<b class="alert">increase</b> the bandwith </li>
 							<li class="fragment fade-up">$\Longrightarrow$ with a consequential improvement in daily 
 								<b class="alert">data rate</b> </li>
-							<li class="fragment fade-up"> ALMA Field will <b class="alert">increase</b> </li>
-							<li class="fragment fade-up"> $\Longrightarrow$  with a consequential 
-								improvement in <b class="alert">data size</b> </li>
+							<li class="fragment fade-up"> $\Longrightarrow$ and thus with a consequential 
+								increse in <b class="alert">data size</b> </li>
 						</ul>
 						<br>
 						<br>
@@ -93,7 +92,7 @@
 					<section>
 						<h3 class="slide-title" style="position:absolut; top:0;">What we are trying to achieve</h3>
 						<ul class="fragment fade-down">
-							<li>Increase the Data Processing Speed</li>
+							<li>Increase the Image Processing Speed</li>
 							<li>Make as few assumptions as possible, and learn more from the data</li>
 							<li>Completely automatize the source detection and characterization</li>
 							<li>Data compression rates allowing storage
@@ -344,7 +343,7 @@
 				<!-- Fourth set of slices - Simulating ALMA Observations -->
 				<section>
 					<section>
-						<h3 class="slide-title" style="position:absolut; top:0;">Simulating ALMA Observations</h3>
+						<h3 class="slide-title" style="position:absolut; top:0;">Simulating Sky Models</h3>
 						<div class="container" style="font-size: 20px">
 							<div class="fragment fade-up" align="left" style="margin-left:40px">
 								<ul>
@@ -352,7 +351,7 @@
 									<li>We generate a random number $n \in [2, 5]$ 2D Gaussian components</li>
 									<li>$FWHM_{s} \in [2, 8]$ pixels</li>
 									<li>$\theta \in [0^{\circ}, 90^{\circ}]$</li>
-									<li>Brightness $\in [1, 5]$ units</li>
+									<li>Brightness $\in [1, 5]$ flux units</li>
 								</ul>
 							</div>
 						</div>
@@ -540,14 +539,8 @@
 						<h3 class="slide-title" style="position:absolut; top:0;">2D Sources Probability Map</h3>
 						<img data-src="assets/Pipeline_ProbabilityMap.png"/>
 					</section>
-					<section>
-						<h3 class="slide-title" style="position:absolut; top:0;">Spectral Denoising and Lines Detection</h3>
-						<img data-src="assets/Pipeline_Spectral.png"/>
-					</section>
-					<section>
-						<h3 class="slide-title" style="position:absolut; top:0;">Sources Parameters Estimation</h3>
-						<img data-src="assets/Pipeline_Parameters.png"/>
-					</section>
+					
+					
 					<section>
 						<h3 class="slide-title" style="position:absolut; top:0;">
 							2. Feeding the data to <b class="alert">Blobs Finder</b>
@@ -580,7 +573,7 @@
 						<h3 class="slide-title" style="position:absolut; top:0;">Blobs Finder</h3>
 						<p>It's called Blobs Finder because we do not want it to find morphologies but only to find sources</p>
 						<p class="fragment fade-up">The model is learning to <b class='alert'>distinguish sources from noise</b> and 
-							also learning the UV map and its correlation with the noise pattern in the data.
+							also learning the UV map and the background pattern.
 						</p>
 						<img data-src="assets/BlobsFinder.png">
 					</section>
@@ -910,6 +903,12 @@
 							</div>
 						</div>	
 					</section>
+
+					<section>
+						<h3 class="slide-title" style="position:absolut; top:0;">Spectral Denoising and Lines Detection</h3>
+						<img data-src="assets/Pipeline_Spectral.png"/>
+					</section>
+
 					<section>
 						<h3 class="slide-title" style="position:absolut; top:0;" >
 							Feeding the data to<b class="alert"> Deep GRU</b>
@@ -1014,6 +1013,7 @@
 						<h3 class="slide-title" style="position:absolut; top:0;">
 							Sources are put in <b class="alert">Focus</b> 
 						</h3>
+						<p><b class='alert'>Focusing</b>: cropping spatially around the source position in the xy plane and integrating only where there is emission</p>
 						<div class="container">
 							<div class="col">
 								<img data-src="assets/focusing_47.png">
@@ -1122,6 +1122,11 @@
 				
 							</div>
 						</div>
+					</section>
+
+					<section>
+						<h3 class="slide-title" style="position:absolut; top:0;">Sources Parameters Estimation</h3>
+						<img data-src="assets/Pipeline_Parameters.png"/>
 					</section>
 
 					<section>
